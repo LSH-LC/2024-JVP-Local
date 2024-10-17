@@ -1,23 +1,38 @@
 package W06_JVP_Package;
 
+import java.util.Arrays;
+
 public class W06_JVP_05_pp_1
 {
-	public static void main(String[] args)
+    public static void main(String[] args)
 	{
-		int[] number = new int[10];
-		int num = 0;
-		int i = 0;
-		
-		while(true)
+        int [] numbers = new int[10];
+        int count = 0;
+
+        while (count < 10)
 		{
-			num = (int)(Math.random()*10)+1;
-			if(number[i-1] == num)
+            int randomNum = (int)(Math.random() * 10) + 1; // 1부터 10까지의 랜덤 숫자
+            boolean duplicate = false;
+
+            for (int i = 0; i < count; i++)
 			{
-				continue;
-			}
-			number[i] = num;
-			i++;
-			
-		}
-	}
+                if (numbers[i] == randomNum)
+				{
+                    duplicate = true; 					//중복되면 while문으로 나간다.
+                }
+            }
+
+            if (!duplicate)								//false일 때 실행
+			{
+                numbers[count] = randomNum;
+                count++;
+            }
+        }
+
+        Arrays.sort(numbers); 								//정렬 및 출력
+        for (int i = 0; i < 10; i++)
+		{
+            System.out.println(numbers[i]);
+        }
+    }
 }
