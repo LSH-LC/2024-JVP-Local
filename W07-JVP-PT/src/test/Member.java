@@ -31,7 +31,8 @@ public class Member {
     public void setAge(int age) { this.age = age; }
 
     // 메인 메소드
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Member user1 = new Member("홍길동", "hong");
 
         // user1의 정보 출력
