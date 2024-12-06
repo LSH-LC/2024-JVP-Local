@@ -7,37 +7,44 @@ public class practice4
 	{
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("µÎ ¼öÀÇ °è»ê½ÄÀ» ÀÔ·ÂÇÏ½Ã¿À : ");
-		int x = scanner.nextInt();
-		String z = scanner.next();
-		int y = scanner.nextInt();
-		
-		
-		switch (z)
+		while(true)
 		{
-		case "+":
-			System.out.println(x + " + " + y + " = " + (x + y));
-			break;
-		
-		case "-":
-			System.out.println(x + " - " + y + " = " + (x - y));
-			break;
-		
-		case "*":
-			System.out.println(x + " * " + y + " = " + (x * y));
-			break;
+			System.out.print("ë‘ ìˆ˜ì˜ ê³„ì‚°ì‹ì„ ì…ë ¥í•˜ì‹œì˜¤ : ");
+			int x = scanner.nextInt();
+			String z = scanner.next();
+			int y = scanner.nextInt();
 			
-		case "/":
-			System.out.println(x + " / " + y + " = " + (x / y));
-			break;
+			if(z == "q")
+			{
+				break;
+			}
 			
-		case "%":
-			System.out.println(x + " % " + y + " = " + (x % y));
-			break;
+			switch (z)
+			{
+			case "+":
+				System.out.println(x + " + " + y + " = " + (x + y));
+				break;
 			
-		default:
-			System.out.println("¿¬»ê ºÎÈ£°¡ Æ²·È½À´Ï´Ù.");
-			break;
+			case "-":
+				System.out.println(x + " - " + y + " = " + (x - y));
+				break;
+			
+			case "*":
+				System.out.println(x + " * " + y + " = " + (x * y));
+				break;
+				
+			case "/":
+				System.out.println(x + " / " + y + " = " + (x / y));
+				break;
+				
+			case "%":
+				System.out.println(x + " % " + y + " = " + (x % y));
+				break;
+				
+			default:
+				System.out.println("ì—°ì‚° ë¶€í˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.");
+				break;
+			}
 		}
 		scanner.close();
 	}
