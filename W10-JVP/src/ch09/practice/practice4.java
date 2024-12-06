@@ -14,7 +14,7 @@ public class practice4
 			String z = scanner.next();
 			int y = scanner.nextInt();
 			
-			if(z == "q")
+			if(z.equals("q"))
 			{
 				break;
 			}
