@@ -13,7 +13,7 @@ public class guess_number implements guess
     {
         random = new Random();
         scanner = new Scanner(System.in);
-        targetNumber = random.nextInt(45) + 1;  // 1 ~ 45 »çÀÌÀÇ ·£´ı ¼ıÀÚ
+        targetNumber = random.nextInt(45) + 1;  // 1 ~ 45 ì‚¬ì´ì˜ ëœë¤ ìˆ«ì
         attempts = 0;
     }
 
@@ -22,12 +22,12 @@ public class guess_number implements guess
     {
         int guess;
 
-        System.out.println("1ºÎÅÍ 45 »çÀÌÀÇ ¼ıÀÚ¸¦ ¸ÂÃçº¸¼¼¿ä!");
+        System.out.println("1ë¶€í„° 45 ì‚¬ì´ì˜ ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš”!");
 
         while (true)
         {
             attempts++;
-            System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+            System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
             guess = scanner.nextInt();
 
             if (guess < targetNumber)
@@ -43,7 +43,7 @@ public class guess_number implements guess
             else
             {
                 System.out.println("RIGHT");
-                System.out.println("ÃàÇÏÇÕ´Ï´Ù! " + attempts + "¹ø ¸¸¿¡ ¸ÂÃè½À´Ï´Ù.");
+                System.out.println("ì¶•í•˜í•©ë‹ˆë‹¤! " + attempts + "ë²ˆ ë§Œì— ë§ì·„ìŠµë‹ˆë‹¤.");
                 break;
             }
         }
